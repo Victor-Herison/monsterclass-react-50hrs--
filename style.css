@@ -1,107 +1,55 @@
-
+/* Estilo geral do fundo */
 body {
-    font-family: "Arial", sans-serif;
-    background: #1b1e2f; 
-    color: #00ff99;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
- 
-  .popup {
-    background: rgba(10, 10, 10, 0.95); 
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #00ff99;
-    width: 320px;
-    text-align: center;
-  }
-  
-  
-  input[type="text"] {
-    width: 80%;
-    padding: 8px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background: #002200;
-    color: #00ff99;
-    outline: none;
-    font-size: 16px;
-  }
-  
-  
-  button {
-    background: #00ff99;
-    color: black;
-    border: none;
-    padding: 8px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  button:hover {
-    background: #00cc77;
-    box-shadow: 0px 0px 10px #00ff99;
-  }
-  
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background: rgba(0, 255, 100, 0.1);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.3s;
-  }
-  
-  
-  .feito {
-    text-decoration: line-through;
-    color: #00aa55;
-    opacity: 0.6;
-  }
-  
+  font-family: "Arial", sans-serif;
+  background: #1b1e2f; /* Azul escuro elegante */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
-  input[type="checkbox"] {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border-radius: 5px;
-    border: 2px solid #00ff99;
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-    transition: 0.3s;
-  }
-  
-  input[type="checkbox"]:hover {
-    border-color: #00cc77;
-  }
-  
-  input[type="checkbox"]:checked {
-    background: #00ff99;
-    border-color: #00ff99;
-  }
-  
-  input[type="checkbox"]:checked::after {
-    content: "✔";
-    font-size: 14px;
-    color: black;
-    position: absolute;
-    left: 2px;
-    top: -1px;
-  }
-  
+/* Container principal */
+.meals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+/* Estilização de cada card */
+.meal-card {
+  background: #2a2d44; /* Azul escuro mais claro */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3) ;
+}
+
+.meal-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 255, 255, 0.2);
+}
+
+/* Estilizando as imagens */
+.meal-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.meal-card img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Nome da refeição */
+.meal-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ffff; /* Ciano neon */
+  margin-top: 10px;
+}
